@@ -12,11 +12,11 @@ function writeResult(filePath,content){
     console.log(e);
   }
 }
-
+//kill after a minute if still running
 function maxTime(){
   setTimeout(function(){
     phantom.exit();
-  },30000)
+  },60000)
 }
 
 exports.maxTime = maxTime;
